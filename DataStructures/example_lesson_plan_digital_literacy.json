@@ -1,0 +1,104 @@
+{
+  "lesson_id": "ict-digilit-mindmap-l02",
+  "header": {
+    "date": "2026-09-16",
+    "class_group": "Y7-ICT-C",
+    "unit_of_work": "Digital Literacy",
+    "topic": "Building a hierarchical mind map to plan an extended piece of writing",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 50
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 2 of 4 — Mind Maps",
+    "previous_lesson_summary": "Last lesson pupils explored an existing mind-mapping tool's interface and annotated a pre-built example, identifying central node, branches and sub-branches.",
+    "prerequisite_lesson_ids": ["ict-digilit-mindmap-l01"],
+    "next_lesson_link": "Next lesson pupils export their mind map and use it as the planning basis for a PowerPoint slide structure, beginning the PowerPoint unit."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils can construct a mind map with a central topic, at least three main branches, and at least two levels of sub-branching to represent a hierarchical structure of ideas.",
+    "assessment_criteria": [
+      "Each student will create a central node clearly labelled with the main topic.",
+      "Each student will add at least three main branches representing distinct sub-themes.",
+      "Each student will add at least one further level of sub-branches beneath at least two main branches."
+    ],
+    "activity_summary": "Individual construction of a mind map for a given writing topic, using the class mind-mapping software, followed by a paired peer-review swap."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "generic-mindmap-software",
+    "application_skill_ids": ["app.mindmap.central-node", "app.mindmap.hierarchical-structure"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["models", "guided-practice", "checking-for-understanding", "independent-practice"]
+  },
+  "preparation": {
+    "resources": ["Mind-mapping software licence access", "Worked example mind map (printed)", "Writing topic prompt sheet"],
+    "key_vocabulary": [
+      { "term": "hierarchy", "tier": "tier2-academic", "polysemous": false, "definition": "An ordering of ideas from general (central) to specific (sub-branches)." },
+      { "term": "branch", "tier": "tier2-academic", "polysemous": true, "definition": "A line connecting related ideas in a mind map; distinct from its computing/algorithms meaning used later in KS4." }
+    ],
+    "additional_adult_role": "Support pupils who default to a linear list rather than a branching structure, using the printed worked example to prompt re-grouping.",
+    "send_five_a_day": ["explicit-instruction", "scaffolding"],
+    "accessibility": ["High-contrast software theme available", "Printed worked example as an alternative to the on-screen model for pupils who benefit from a static reference"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "teacher_actions": "Display three unconnected topic words; ask pupils to jot down which they think should be 'central' and why.",
+      "pupil_actions": "Individually note their choice and one reason on mini-whiteboards.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "Which of these three words is broad enough to sit at the centre of a mind map?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils identify the broadest term; otherwise briefly re-discuss general-to-specific ordering."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 8,
+      "teacher_actions": "Model live construction of a central node and three main branches in the mind-mapping software for a sample topic.",
+      "pupil_actions": "Watch and identify verbally when a new branch versus a new sub-branch should be added.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Should this new idea be a main branch or a sub-branch of an existing one?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Move to guided practice regardless; use responses to judge how much modelling of sub-branching is needed next."
+      }
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 7,
+      "teacher_actions": "Add a second level of sub-branches to the live example, thinking aloud about how a specific detail relates back to its parent branch.",
+      "pupil_actions": "Observe; note one example of a sub-branch relationship they found convincing.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 20,
+      "teacher_actions": "Set independent construction task using the writing topic prompt; circulate offering least-help-first prompts to pupils who have stalled at three branches with no sub-branching.",
+      "pupil_actions": "Independently construct a mind map for the given writing topic, aiming for the full assessment criteria.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Does your mind map have at least two branches with a further level of sub-branches beneath them?",
+        "format": "other",
+        "decision_rule": "Pupils below threshold at the 15-minute mark receive a targeted prompt referencing the worked example."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "teacher_actions": "Facilitate paired peer review against the assessment criteria checklist; cold-call two pairs to share one strength and one improvement.",
+      "pupil_actions": "Swap with a partner, check the criteria checklist against the partner's mind map, and give one specific piece of feedback.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: how many levels of sub-branching does your final mind map have?",
+        "format": "other",
+        "decision_rule": "Pupils reporting only one level are flagged for a brief starter recap at the beginning of the next lesson before moving to PowerPoint."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

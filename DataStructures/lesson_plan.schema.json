@@ -1,0 +1,345 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://strata-advantage.internal/schemas/lesson_plan.schema.json",
+  "title": "CS Lesson Plan (Teach First Proforma + Pedagogy Database alignment)",
+  "description": "Schema for GCSE Computer Science lesson plans generated for the AI-Enhanced Personalised Education Service. Based on the Teach First Planning Proforma structure, extended with metadata linking each lesson to the project's DOK/AO/PRIMM/BKT skill model.",
+  "type": "object",
+  "required": [
+    "lesson_id",
+    "header",
+    "learning_sequence_context",
+    "expected_outcomes",
+    "pedagogical_metadata",
+    "preparation",
+    "teaching_episode"
+  ],
+  "properties": {
+    "lesson_id": {
+      "type": "string",
+      "description": "Stable unique identifier, e.g. 'cs-algo-selection-l03'."
+    },
+
+    "header": {
+      "type": "object",
+      "description": "Direct equivalent of the proforma's top row (Date / Class / Unit of work).",
+      "required": ["unit_of_work", "topic", "key_stage"],
+      "properties": {
+        "date": { "type": "string", "format": "date", "description": "Omit or leave null for template/bank lessons not yet scheduled." },
+        "class_group": { "type": "string", "description": "Anonymised class identifier only — never an identifiable pupil list. Consistent with the privacy-first architecture." },
+        "unit_of_work": { "type": "string", "example": "Algorithms" },
+        "topic": { "type": "string", "example": "Selection: IF/ELSE branching" },
+        "key_stage": { "type": "string", "enum": ["KS3", "KS4"] },
+        "exam_board": { "type": "string", "enum": ["AQA", "OCR", "Edexcel", "WJEC/Eduqas", "board-agnostic"] },
+        "specification_code": { "type": "string", "description": "e.g. '8525' (AQA), 'J277' (OCR), '1CP2' (Edexcel).", "example": "8525" },
+        "duration_minutes": { "type": "integer", "minimum": 1, "description": "Should equal the sum of teaching_episode[].timing_minutes." }
+      }
+    },
+
+    "learning_sequence_context": {
+      "type": "object",
+      "description": "Where this lesson sits in the scheme of work.",
+      "required": ["position_in_sequence"],
+      "properties": {
+        "position_in_sequence": { "type": "string", "description": "e.g. 'Lesson 3 of 6 — Selection'." },
+        "previous_lesson_summary": { "type": "string", "description": "'Last lesson I...'" },
+        "prerequisite_lesson_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "lesson_id values that should logically precede this one."
+        },
+        "next_lesson_link": { "type": "string", "description": "What this lesson sets up for next." }
+      }
+    },
+
+    "expected_outcomes": {
+      "type": "object",
+      "required": ["lesson_objective", "assessment_criteria", "activity_summary"],
+      "properties": {
+        "lesson_objective": { "type": "string" },
+        "assessment_criteria": {
+          "type": "array",
+          "description": "'Each student will...' statements.",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "activity_summary": { "type": "string" }
+      }
+    },
+
+    "pedagogical_metadata": {
+      "type": "object",
+      "description": "Links this lesson to the Pedagogy Database / Assessment-Analysis-Composition Engine model. Split into deterministic fields (set at Stage 1 generation from the curriculum DAG) and moderated fields (set at Stage 2 moderation and reconciled per the 'moderation' object below). Structure varies by learning_strand — see allOf conditionals below.",
+      "required": ["learning_strand"],
+      "properties": {
+        "learning_strand": {
+          "type": "string",
+          "enum": [
+            "ks3-digital-literacy",
+            "ks3-computational-foundations",
+            "ks3-web-markup",
+            "ks3-ks4-programming-track"
+          ],
+          "description": "Which curriculum strand this lesson belongs to. Determines which skill-ID field and which optional fields (DOK, AOs, notation) are meaningful for this lesson. ks3-ks4-programming-track spans Y9 Small Basic introduction through to GCSE Python and absorbs the existing five-stage GCSE algorithms progression."
+        },
+        "notation_form": {
+          "type": "string",
+          "enum": ["pseudocode", "flowchart", "text-code", "markup", "application-gui", "binary-representation", "not-applicable"],
+          "description": "The representational abstraction used, independent of the specific tool. Deterministic — set from the curriculum seed."
+        },
+        "tool": {
+          "type": "string",
+          "description": "The specific software/language implementing notation_form, e.g. 'Flowol', 'Small-Basic', 'BASIC-256', 'Python', 'HTML', 'PowerPoint', 'Excel'. Deterministic. Kept as an open string with a controlled vocabulary maintained in the Pedagogy Database, rather than a closed enum, since new tools (e.g. a future BASIC-256 replacement) shouldn't require a schema change.",
+          "example": "Small-Basic"
+        },
+        "primm_phase": {
+          "type": "string",
+          "enum": ["Predict", "Run", "Investigate", "Modify", "Make", "not-applicable"],
+          "description": "Deterministic — applies only within ks3-ks4-programming-track, fully determined by notation_form per the five-stage PRIMM mapping (pseudocode→Predict, flowchart→Run, text-code first contact→Investigate, text-code with scope constraints→Modify, full text-code→Make). Not a moderation target."
+        },
+        "algorithm_skill_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ks3-ks4-programming-track only. Deterministic — BKT knowledge component IDs from the curriculum DAG, e.g. 'algo.selection.if-else'."
+        },
+        "notation_skill_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ks3-ks4-programming-track only. Deterministic — BKT knowledge component IDs, e.g. 'notation.pseudocode.fluency', 'notation.small-basic.fluency'."
+        },
+        "application_skill_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ks3-digital-literacy only. Skill IDs for GUI-application proficiency, e.g. 'app.mindmap.hierarchical-structure', 'app.powerpoint.slide-design', 'app.excel.formula-basic'. A distinct BKT dimension from algorithm_skill_ids — this is procedural software competence, not algorithmic reasoning."
+        },
+        "concept_skill_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ks3-computational-foundations only. Skill IDs for Y8 foundational computing concepts, e.g. 'concept.binary.place-value', 'concept.flowol.sequence-control', 'notation.small-basic.fluency-intro'."
+        },
+        "markup_skill_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ks3-web-markup only. Skill IDs for HTML structural competence, e.g. 'html.structure.semantic-tags', 'html.attributes.href'. Markup has no algorithmic-complexity dimension in the DOK sense — this strand does not use dok_level."
+        },
+        "threshold_concept": {
+          "type": "boolean",
+          "default": false,
+          "description": "Deterministic where the topic is a designated threshold concept in the curriculum DAG (e.g. Selection); otherwise a Stage 2 judgement call — set moderation.status accordingly."
+        },
+        "rosenshine_principles": {
+          "type": "array",
+          "description": "Which of Rosenshine's principles the segments visibly enact. Low-ambiguity — may be auto-detected at Stage 1 rather than routed through moderation.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "daily-review", "small-steps", "questioning", "models",
+              "guided-practice", "checking-for-understanding",
+              "high-success-rate", "scaffolds-for-difficult-tasks",
+              "independent-practice", "weekly-monthly-review"
+            ]
+          }
+        },
+
+        "dok_level": {
+          "type": "object",
+          "description": "ks3-ks4-programming-track only (Webb's DOK is usable pre-GCSE, but only this strand's AO mapping ties it to exam-board weighting — see allOf below). Moderated — cognitive complexity demanded by the lesson's tasks, judged independently of the objective's verb wording.",
+          "required": ["primary", "rationale"],
+          "properties": {
+            "primary": { "type": "integer", "minimum": 1, "maximum": 4 },
+            "range": {
+              "type": "array",
+              "items": { "type": "integer", "minimum": 1, "maximum": 4 },
+              "minItems": 2,
+              "maxItems": 2,
+              "description": "[min, max] DOK span covered across the lesson's activities."
+            },
+            "rationale": {
+              "type": "string",
+              "description": "Why this level was assigned, tied to specific teaching_episode segments. Mandatory — an unrationalised DOK tag is not moderatable."
+            }
+          }
+        },
+        "assessment_objectives": {
+          "type": "array",
+          "description": "Moderated — board-specific AOs this lesson addresses, checked against the actual specification.",
+          "items": {
+            "type": "object",
+            "required": ["board", "ao_code", "rationale"],
+            "properties": {
+              "board": { "type": "string", "enum": ["AQA", "OCR", "Edexcel", "WJEC/Eduqas"] },
+              "ao_code": { "type": "string", "example": "AO2" },
+              "specification_reference": { "type": "string", "description": "Section/appendix reference within the spec." },
+              "rationale": { "type": "string", "description": "Why this AO applies, tied to specific segments." }
+            }
+          }
+        },
+        "misconception_ids": {
+          "type": "array",
+          "description": "Moderated — references into the Pedagogy Database misconception catalogue this lesson is designed to surface or address.",
+          "items": { "type": "string" }
+        },
+
+        "moderation": {
+          "type": "object",
+          "description": "Provenance and audit trail for the moderated fields above (dok_level, assessment_objectives, misconception_ids, and threshold_concept where not curriculum-determined).",
+          "required": ["status"],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["unmoderated", "provisional", "disputed", "expert-assigned"],
+              "description": "unmoderated: Stage 2 not yet run. provisional: two independent raters agreed, not yet human-checked. disputed: raters disagreed, queued for human review. expert-assigned: human-confirmed."
+            },
+            "raters": {
+              "type": "array",
+              "description": "One entry per independent Stage 2 pass.",
+              "items": {
+                "type": "object",
+                "required": ["rater_id", "dok_primary", "timestamp"],
+                "properties": {
+                  "rater_id": { "type": "string", "example": "ai-pass-1" },
+                  "dok_primary": { "type": "integer", "minimum": 1, "maximum": 4 },
+                  "ao_codes": { "type": "array", "items": { "type": "string" } },
+                  "misconception_ids": { "type": "array", "items": { "type": "string" } },
+                  "rationale": { "type": "string" },
+                  "timestamp": { "type": "string", "format": "date-time" }
+                }
+              }
+            },
+            "reconciled_by": {
+              "type": ["string", "null"],
+              "description": "Human identifier, or null if not yet reconciled."
+            },
+            "reconciled_at": {
+              "type": ["string", "null"],
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "learning_strand": { "const": "ks3-digital-literacy" } } },
+          "then": { "required": ["application_skill_ids"] }
+        },
+        {
+          "if": { "properties": { "learning_strand": { "const": "ks3-computational-foundations" } } },
+          "then": { "required": ["concept_skill_ids", "notation_form", "tool"] }
+        },
+        {
+          "if": { "properties": { "learning_strand": { "const": "ks3-web-markup" } } },
+          "then": { "required": ["markup_skill_ids", "notation_form"] }
+        },
+        {
+          "if": { "properties": { "learning_strand": { "const": "ks3-ks4-programming-track" } } },
+          "then": { "required": ["algorithm_skill_ids", "notation_form", "tool", "primm_phase"] }
+        }
+      ]
+    },
+
+    "preparation": {
+      "type": "object",
+      "required": ["resources"],
+      "properties": {
+        "resources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "example": ["PowerPoint presentation", "Boost Learning quiz"]
+        },
+        "key_vocabulary": {
+          "type": "array",
+          "description": "Disciplinary literacy metadata (Tier 2/3 vocabulary), per EEF Improving Literacy in Secondary Schools.",
+          "items": {
+            "type": "object",
+            "required": ["term", "tier"],
+            "properties": {
+              "term": { "type": "string" },
+              "tier": { "type": "string", "enum": ["tier2-academic", "tier3-subject-specific"] },
+              "polysemous": { "type": "boolean", "default": false, "description": "Flag words with a distinct everyday meaning, e.g. 'variable', 'argument'." },
+              "definition": { "type": "string" }
+            }
+          }
+        },
+        "additional_adult_role": { "type": "string" },
+        "send_five_a_day": {
+          "type": "array",
+          "description": "EEF SEND 'Five-a-Day' strategies deliberately built into this lesson.",
+          "items": {
+            "type": "string",
+            "enum": ["explicit-instruction", "cognitive-metacognitive-strategies", "scaffolding", "flexible-grouping", "technology"]
+          }
+        },
+        "accessibility": {
+          "type": "array",
+          "items": { "type": "string" },
+          "example": ["Dyslexia-friendly font on slides", "Screen-reader-compatible worksheet"]
+        }
+      }
+    },
+
+    "teaching_episode": {
+      "type": "array",
+      "description": "Ordered sequence of segments, mirroring the proforma's Do Now / Introduction / Model / Continued Learning / Review structure.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["segment_type", "timing_minutes", "teacher_actions", "pupil_actions"],
+        "properties": {
+          "segment_type": {
+            "type": "string",
+            "enum": ["do_now", "introduction", "provide_model", "continued_learning", "review_of_learning", "custom"]
+          },
+          "segment_label": { "type": "string", "description": "Free-text label if segment_type is 'custom'." },
+          "timing_minutes": { "type": "integer", "minimum": 1 },
+          "teacher_actions": { "type": "string" },
+          "pupil_actions": { "type": "string" },
+          "notation_used": {
+            "type": "string",
+            "enum": [
+              "pseudocode", "flowchart", "basic-256", "small-basic", "constrained-python", "full-python",
+              "html-markup", "application-gui", "binary-representation", "flowol-control",
+              "verbal-only", "not-applicable"
+            ],
+            "description": "Which notation/tool this segment operates in. Spans all four learning strands, not just the GCSE-track."
+          },
+          "check_for_understanding": {
+            "type": "object",
+            "description": "The proforma's 'Check' row, formalised as a hinge question per Wiliam (2015).",
+            "properties": {
+              "question": { "type": "string" },
+              "format": { "type": "string", "enum": ["hinge-mcq", "verbal-cold-call", "mini-whiteboard", "live-code-check", "other"] },
+              "distractors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "option": { "type": "string" },
+                    "misconception_id": { "type": "string", "description": "Links to pedagogical_metadata.misconception_ids catalogue." }
+                  }
+                }
+              },
+              "decision_rule": { "type": "string", "description": "What the teacher does on strong vs weak response, e.g. 'advance if >80% correct, else reteach with worked example'." }
+            }
+          }
+        }
+      }
+    },
+
+    "evaluation": {
+      "type": ["object", "null"],
+      "description": "Completed after delivery. Null for lesson plans not yet taught.",
+      "properties": {
+        "pupil_progress": { "type": "string" },
+        "implications_for_future_lessons": { "type": "string" }
+      }
+    },
+
+    "reflection": {
+      "type": ["object", "null"],
+      "description": "Completed after delivery. Null for lesson plans not yet taught.",
+      "properties": {
+        "successes": { "type": "string" },
+        "action_points": { "type": "string" }
+      }
+    }
+  }
+}

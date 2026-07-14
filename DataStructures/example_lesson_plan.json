@@ -1,0 +1,156 @@
+{
+  "lesson_id": "cs-algo-selection-l03",
+  "header": {
+    "date": "2026-09-14",
+    "class_group": "Y10-CS-B",
+    "unit_of_work": "Algorithms",
+    "topic": "Selection: IF/ELSE branching across five notations",
+    "key_stage": "KS4",
+    "exam_board": "AQA",
+    "specification_code": "8525",
+    "duration_minutes": 50
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 3 of 6 — Selection (foundational module, compulsory full traversal)",
+    "previous_lesson_summary": "Last lesson pupils traced pseudocode IF/ELSE examples and identified the decision diamond in a given flowchart.",
+    "prerequisite_lesson_ids": ["cs-algo-selection-l01", "cs-algo-selection-l02"],
+    "next_lesson_link": "Next lesson pupils translate their flowchart solutions into BASIC-256, beginning first contact with a real parser."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils can construct a flowchart representation of an IF/ELSE selection structure that is behaviourally equivalent to a given pseudocode algorithm.",
+    "assessment_criteria": [
+      "Each student will correctly place a decision diamond with a single boolean condition.",
+      "Each student will correctly route the True and False branches to matching pseudocode outcomes.",
+      "Each student will identify at least one discrepancy when their flowchart is traced against test data."
+    ],
+    "activity_summary": "Paired flowchart construction from a given pseudocode grading algorithm, followed by peer trace-testing against provided inputs."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-ks4-programming-track",
+    "primm_phase": "Run",
+    "notation_form": "flowchart",
+    "tool": "standard-GCSE-flowchart-symbol-set",
+    "algorithm_skill_ids": ["algo.selection.if-else"],
+    "notation_skill_ids": ["notation.pseudocode.fluency", "notation.flowchart.fluency"],
+    "threshold_concept": true,
+    "rosenshine_principles": ["daily-review", "small-steps", "models", "checking-for-understanding", "guided-practice"],
+
+    "dok_level": {
+      "primary": 2,
+      "range": [1, 2],
+      "rationale": "Continued_learning and review_of_learning segments require pupils to construct and trace a flowchart against test data (Skills and Concepts), not merely recall the symbol set (which is DOK 1, covered in the introduction segment only)."
+    },
+    "assessment_objectives": [
+      { "board": "AQA", "ao_code": "AO1", "specification_reference": "3.1 Fundamentals of algorithms", "rationale": "Recall and correct use of standard flowchart symbols (introduction segment)." },
+      { "board": "AQA", "ao_code": "AO2", "specification_reference": "3.1 Fundamentals of algorithms", "rationale": "Application of selection logic to a novel pseudocode algorithm in the paired construction task (continued_learning segment)." }
+    ],
+    "misconception_ids": ["misc.selection.missing-else-branch", "misc.selection.multiple-conditions-confusion"],
+
+    "moderation": {
+      "status": "provisional",
+      "raters": [
+        {
+          "rater_id": "ai-pass-1",
+          "dok_primary": 2,
+          "ao_codes": ["AO1", "AO2"],
+          "misconception_ids": ["misc.selection.missing-else-branch", "misc.selection.multiple-conditions-confusion"],
+          "rationale": "Construction-and-trace task exceeds pure recall; no strategic/extended reasoning across cases required, so capped at DOK 2.",
+          "timestamp": "2026-07-10T09:15:00Z"
+        },
+        {
+          "rater_id": "ai-pass-2",
+          "dok_primary": 2,
+          "ao_codes": ["AO1", "AO2"],
+          "misconception_ids": ["misc.selection.missing-else-branch"],
+          "rationale": "Agrees DOK 2; construction plus trace-testing against provided data is application, not strategic thinking.",
+          "timestamp": "2026-07-10T09:16:30Z"
+        }
+      ],
+      "reconciled_by": null,
+      "reconciled_at": null
+    }
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Boost Learning quiz", "Printed pseudocode algorithm cards", "Flowchart symbol stencils"],
+    "key_vocabulary": [
+      { "term": "condition", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A boolean expression evaluated to determine branch taken." },
+      { "term": "branch", "tier": "tier2-academic", "polysemous": true, "definition": "A path of execution following a decision point; everyday meaning relates to trees/organisations." }
+    ],
+    "additional_adult_role": "Circulate during paired construction, prompting pairs with a stalled decision diamond using a 'what happens if the condition is false?' hinge question.",
+    "send_five_a_day": ["explicit-instruction", "scaffolding", "flexible-grouping"],
+    "accessibility": ["Dyslexia-friendly font on slides", "Enlarged flowchart symbol stencils available"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "teacher_actions": "Display a pseudocode IF/ELSE snippet from last lesson; ask pupils to trace it silently for two given inputs.",
+      "pupil_actions": "Trace pseudocode independently and write predicted output for each input.",
+      "notation_used": "pseudocode",
+      "check_for_understanding": {
+        "question": "For input mark = 45, which branch of the grading algorithm executes?",
+        "format": "mini-whiteboard",
+        "distractors": [
+          { "option": "The True branch (Pass)", "misconception_id": "misc.selection.missing-else-branch" },
+          { "option": "The False branch (Fail)" }
+        ],
+        "decision_rule": "Proceed to introduction if >80% correct; otherwise re-trace as a class first."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 10,
+      "teacher_actions": "Present the standard GCSE flowchart symbol set (process, decision, start/stop, connector) and model mapping the Do Now pseudocode onto a decision diamond.",
+      "pupil_actions": "Annotate their own symbol reference sheet alongside teacher's live model.",
+      "notation_used": "flowchart",
+      "check_for_understanding": {
+        "question": "Which symbol represents a decision point?",
+        "format": "hinge-mcq",
+        "distractors": [
+          { "option": "Diamond" },
+          { "option": "Rectangle", "misconception_id": "misc.selection.multiple-conditions-confusion" },
+          { "option": "Oval" }
+        ],
+        "decision_rule": "Advance if near-unanimous; otherwise re-model with a second worked example."
+      }
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 10,
+      "teacher_actions": "Fully worked example: convert a second, slightly more complex pseudocode algorithm (nested condition removed for this stage) into a complete flowchart on the board, thinking aloud.",
+      "pupil_actions": "Watch and question; no independent construction yet.",
+      "notation_used": "flowchart",
+      "check_for_understanding": {
+        "question": "Why does the False branch need its own arrow back to a shared end point?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Move to guided practice regardless, using response to calibrate scaffolding level."
+      }
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 15,
+      "teacher_actions": "Set paired flowchart construction task from the printed pseudocode grading algorithm; circulate using least-help-first prompting.",
+      "pupil_actions": "In pairs, construct a flowchart, then trace it against two provided test inputs to check behavioural equivalence with the pseudocode.",
+      "notation_used": "flowchart",
+      "check_for_understanding": {
+        "question": "Does your flowchart produce the same output as the pseudocode for mark = 39?",
+        "format": "live-code-check",
+        "decision_rule": "Pairs who fail the trace revisit the provide_model example before resubmitting."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "teacher_actions": "Cold-call two pairs to present their flowcharts under the visualiser; class checks for missing branches or symbol errors.",
+      "pupil_actions": "Compare own flowchart against presented examples; correct any discrepancies.",
+      "notation_used": "flowchart",
+      "check_for_understanding": {
+        "question": "Exit ticket: draw the decision diamond and both branch labels for 'IF age >= 18 THEN adult ELSE minor'.",
+        "format": "mini-whiteboard",
+        "decision_rule": "Notation mastery posterior for flowchart updated from exit ticket accuracy; below-threshold pupils flagged for retreat/reinforcement next lesson."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}
