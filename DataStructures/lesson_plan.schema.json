@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://strata-advantage.internal/schemas/lesson_plan.schema.json",
-  "title": "CS Lesson Plan (Teach First Proforma + Pedagogy Database alignment)",
-  "description": "Schema for GCSE Computer Science lesson plans generated for the AI-Enhanced Personalised Education Service. Based on the Teach First Planning Proforma structure, extended with metadata linking each lesson to the project's DOK/AO/PRIMM/BKT skill model.",
+  "title": "Generic Lesson Plan Schema",
+  "description": "Schema developed for GCSE Computer Science lesson plans. Based on the Teach First Planning Proforma structure, extended with metadata linking each lesson to the project's DOK/AO/PRIMM/BKT skill model.",
   "type": "object",
   "required": [
     "lesson_id",
@@ -21,12 +21,11 @@
 
     "header": {
       "type": "object",
-      "description": "Direct equivalent of the proforma's top row (Date / Class / Unit of work).",
-      "required": ["unit_of_work", "topic", "key_stage"],
+      "description": "Direct equivalent of the proforma's top row (Date / Class / Topic).",
+      "required": ["specification_reference", "topic", "key_stage"],
       "properties": {
         "date": { "type": "string", "format": "date", "description": "Omit or leave null for template/bank lessons not yet scheduled." },
-        "class_group": { "type": "string", "description": "Anonymised class identifier only — never an identifiable pupil list. Consistent with the privacy-first architecture." },
-        "unit_of_work": { "type": "string", "example": "Algorithms" },
+        "year_group": { "type": "string", "description": "Anonymised class identifier only — never an identifiable pupil list. Consistent with the privacy-first architecture." },
         "topic": { "type": "string", "example": "Selection: IF/ELSE branching" },
         "key_stage": { "type": "string", "enum": ["KS3", "KS4"] },
         "exam_board": { "type": "string", "enum": ["AQA", "OCR", "Edexcel", "WJEC/Eduqas", "board-agnostic"] },
