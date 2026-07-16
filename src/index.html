@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Lesson Plan Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --primary-colour: #1a73e8;
+            --background-colour: #f8f9fa;
+            --surface-colour: #ffffff;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --border-colour: #dadce0;
+            --danger-colour: #d93025;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-colour);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header.app-bar {
+            background-color: var(--surface-colour);
+            width: 100%;
+            padding: 16px 24px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .actions button {
+            background-color: var(--primary-colour);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            margin-left: 8px;
+        }
+
+        .actions button:hover { background-color: #1557b0; }
+        .actions input[type="file"] { display: none; }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--surface-colour);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: var(--primary-colour);
+            border-bottom: 1px solid var(--border-colour);
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        input[type="text"], input[type="date"], input[type="number"], select, textarea {
+            padding: 10px;
+            border: 1px solid var(--border-colour);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-colour);
+            box-shadow: inset 0 0 0 1px var(--primary-colour);
+        }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+        .episode-segment {
+            border: 1px solid var(--border-colour);
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 16px;
+            background-color: #fafafa;
+            position: relative;
+        }
+
+        .btn-secondary {
+            background-color: transparent !important;
+            color: var(--primary-colour) !important;
+            border: 1px solid var(--border-colour) !important;
+        }
+        
+        .btn-secondary:hover { background-color: #f1f3f4 !important; }
+
+        .btn-remove {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background-color: transparent;
+            color: var(--danger-colour);
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="app-bar">
+        <h1>CS Lesson Plan Editor</h1>
+        <div class="actions">
+            <button id="btn-new"><span class="material-icons">add</span>New</button>
+            <label class="actions" style="cursor: pointer;">
+                <button id="btn-load" onclick="document.getElementById('file-upload').click()"><span class="material-icons">upload</span>Load</button>
+                <input type="file" id="file-upload" accept=".json">
+            </label>
+            <button id="btn-save" onclick="document.getElementById('file-save').click()"><span class="material-icons">save</span>Save Document</button>
+        </div>
+    </header>
+
+    <main id="editor-form">
+        <!-- Metadata & Header -->
+        <div class="card">
+            <h2 class="card-title">Document Metadata & Header</h2>
+            <div class="grid-3">
+                <div class="form-group">
+                    <label for="lesson_id">Lesson ID</label>
+                    <input type="text" id="lesson_id" placeholder="e.g., cs-algo-selection-l03">
+                </div>
+                <div class="form-group">
+                    <label for="unit_of_work">Unit of Work *</label>
+                    <input type="text" id="unit_of_work" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Topic *</label>
+                    <input type="text" id="topic" required>
+                </div>
+                <div class="form-group">
+                    <label for="key_stage">Key Stage *</label>
+                    <select id="key_stage">
+                        <option value="KS3">KS3</option>
+                        <option value="KS4">KS4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exam_board">Exam Board</label>
+                    <select id="exam_board">
+                        <option value="board-agnostic">Board Agnostic</option>
+                        <option value="AQA">AQA</option>
+                        <option value="OCR">OCR</option>
+                        <option value="Edexcel">Edexcel</option>
+                        <option value="WJEC/Eduqas">WJEC/Eduqas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="class_group">Class Group</label>
+                    <input type="text" id="class_group">
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Sequence Context -->
+        <div class="card">
+            <h2 class="card-title">Learning Sequence Context</h2>
+            <div class="form-group">
+                <label for="position_in_sequence">Position in Sequence *</label>
+                <input type="text" id="position_in_sequence" placeholder="e.g., Lesson 3 of 6 — Selection" required>
+            </div>
+            <div class="form-group">
+                <label for="previous_lesson_summary">Previous Lesson Summary ("Last lesson I...")</label>
+                <textarea id="previous_lesson_summary" rows="2"></textarea>
+            </div>
+        </div>
+
+        <!-- Expected Outcomes -->
+        <div class="card">
+            <h2 class="card-title">Expected Outcomes</h2>
+            <div class="form-group">
+                <label for="lesson_objective">Lesson Objective *</label>
+                <input type="text" id="lesson_objective" required>
+            </div>
+            <div class="form-group">
+                <label for="activity_summary">Activity Summary *</label>
+                <textarea id="activity_summary" rows="2" required></textarea>
+            </div>
+        </div>
+
+        <!-- Pedagogical Metadata -->
+        <div class="card">
+            <h2 class="card-title">Pedagogical Metadata</h2>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label for="learning_strand">Learning Strand *</label>
+                    <select id="learning_strand">
+                        <option value="ks3-digital-literacy">KS3 Digital Literacy</option>
+                        <option value="ks3-computational-foundations">KS3 Computational Foundations</option>
+                        <option value="ks3-web-markup">KS3 Web Markup</option>
+                        <option value="ks3-ks4-programming-track">KS3/KS4 Programming Track</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notation_form">Notation Form</label>
+                    <select id="notation_form">
+                        <option value="not-applicable">Not Applicable</option>
+                        <option value="pseudocode">Pseudocode</option>
+                        <option value="flowchart">Flowchart</option>
+                        <option value="text-code">Text Code</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preparation -->
+        <div class="card">
+            <h2 class="card-title">Preparation</h2>
+            <div class="form-group">
+                <label for="resources">Resources (Comma separated)</label>
+                <input type="text" id="resources" placeholder="e.g., PowerPoint presentation, Boost Learning quiz">
+            </div>
+            <div class="form-group">
+                <label for="additional_adult_role">Additional Adult Role</label>
+                <textarea id="additional_adult_role" rows="2" placeholder="What role will an additional adult assume?"></textarea>
+            </div>
+        </div>
+
+        <!-- Teaching Episodes -->
+        <div class="card">
+            <div class="card-title">
+                <span>Teaching Episodes</span>
+                <button type="button" id="btn-add-episode" class="actions btn-secondary" style="font-size: 0.8rem; padding: 4px 8px;">
+                    <span class="material-icons" style="font-size: 1rem;">add</span> Add Segment
+                </button>
+            </div>
+            <div id="episodes-container">
+                <!-- JavaScript will inject episodes here -->
+            </div>
+        </div>
+
+        <!-- Evaluation & Reflection -->
+        <div class="card">
+            <h2 class="card-title">Evaluation & Reflection (Post-Lesson)</h2>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label for="pupil_progress">Pupil Progress</label>
+                    <textarea id="pupil_progress" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="implications">Implications for future lessons</label>
+                    <textarea id="implications" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="successes">Successes</label>
+                    <textarea id="successes" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="action_points">Action Points</label>
+                    <textarea id="action_points" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataStructures"
+    "\\DataStructures",
+    "\\src"
   ],
-  "SelectedNode": "\\DataStructures\\lesson_plan.schema.json",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
