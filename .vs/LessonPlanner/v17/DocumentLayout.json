@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pbridge\\OneDrive - Royal Wootton Bassett Academy\\Documents\\dev\\vscode\\lessonPlanner\\",
+  "WorkspaceRootPath": "C:\\Users\\pbridge\\Documents\\vscode\\lessonPlanner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pbridge\\OneDrive - Royal Wootton Bassett Academy\\Documents\\dev\\vscode\\lessonPlanner\\DataStructures\\lesson_plan.schema.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pbridge\\Documents\\vscode\\lessonPlanner\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pbridge\\Documents\\vscode\\lessonPlanner\\DataStructures\\lesson_plan.schema.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataStructures\\lesson_plan.schema.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -14,28 +18,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "lesson_plan.schema.json",
-              "DocumentMoniker": "C:\\Users\\pbridge\\OneDrive - Royal Wootton Bassett Academy\\Documents\\dev\\vscode\\lessonPlanner\\DataStructures\\lesson_plan.schema.json",
-              "RelativeDocumentMoniker": "DataStructures\\lesson_plan.schema.json",
-              "ToolTip": "C:\\Users\\pbridge\\OneDrive - Royal Wootton Bassett Academy\\Documents\\dev\\vscode\\lessonPlanner\\DataStructures\\lesson_plan.schema.json",
-              "RelativeToolTip": "DataStructures\\lesson_plan.schema.json",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAABsAAACyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-15T14:19:55.215Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\pbridge\\Documents\\vscode\\lessonPlanner\\src\\index.html",
+              "RelativeDocumentMoniker": "src\\index.html",
+              "ToolTip": "C:\\Users\\pbridge\\Documents\\vscode\\lessonPlanner\\src\\index.html",
+              "RelativeToolTip": "src\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-07-17T10:07:27.971Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "lesson_plan.schema.json",
+              "DocumentMoniker": "C:\\Users\\pbridge\\Documents\\vscode\\lessonPlanner\\DataStructures\\lesson_plan.schema.json",
+              "RelativeDocumentMoniker": "DataStructures\\lesson_plan.schema.json",
+              "ToolTip": "C:\\Users\\pbridge\\Documents\\vscode\\lessonPlanner\\DataStructures\\lesson_plan.schema.json",
+              "RelativeToolTip": "DataStructures\\lesson_plan.schema.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-15T14:19:55.215Z"
             }
           ]
         }

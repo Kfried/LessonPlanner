@@ -40,7 +40,13 @@
         2
       ],
       "rationale": "Some students may have very limited digital skills and some may have more, DOK level 2 would be the highest we would want for them."
-    }
+    },
+    "application_skill_ids": [
+      "log in to terminal",
+      "log out of terminal",
+      "lock screen",
+      "unlock screen"
+    ]
   },
   "teaching_episode": [
     {
@@ -49,6 +55,34 @@
       "notation_used": "not-applicable",
       "teacher_actions": "Describe the layout of the room, describe the terminal, demonstrate log in and log out while discussing the processes that occur.",
       "pupil_actions": "log in and out of their terminals"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 5,
+      "teacher_actions": "Demonstrate how to lock screens and unlock screens",
+      "pupil_actions": "Pupils lock and unlock screens",
+      "notation_used": "not-applicable"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 10,
+      "teacher_actions": "Teacher opens OneNote from two different sources from teams and from application",
+      "pupil_actions": "Pupils open their one note from teams and application",
+      "notation_used": "not-applicable"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 10,
+      "teacher_actions": "Teacher demonstrates how to add things to OneNote text, images and screenshot",
+      "pupil_actions": "Pupils Add text, images, and a screenshot to their OneNotes",
+      "notation_used": "not-applicable"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 10,
+      "teacher_actions": "Teacher shows them how to open an application or link in OneNote",
+      "pupil_actions": "Pupils open a linked powerpoint and screenshot the I did it slide into their OneNotes",
+      "notation_used": "not-applicable"
     }
   ],
   "preparation": {
@@ -103,6 +137,79 @@
             "segment_type": "do_now"
           }
         ]
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-07-17T10:22:54.266Z",
+      "summary": "1.1",
+      "snapshot": {
+        "lesson_id": "7-T1-Digital Literacy-1",
+        "header": {
+          "year_group": "Year 7",
+          "topic": "Digital Literacy",
+          "key_stage": "KS3",
+          "exam_board": "board-agnostic",
+          "duration_minutes": 50
+        },
+        "learning_sequence_context": {
+          "position_in_sequence": "1 of 1"
+        },
+        "expected_outcomes": {
+          "lesson_objective": "As a student, I want to know the basic digital skills I need to work well in computer science and what I can and cannot do in the CS rooms, so that I can be successful in the course",
+          "assessment_criteria": [
+            "Be able to log on and log off of  a terminal in the computer room",
+            "Be able to lock and unlock their sessions",
+            "Will be able to state the code of conduct in the CS room and terminal discipline",
+            "Open OneNote from different sources",
+            "Demonstrate that they can access their notebook in OneNote",
+            "Add data to their OneNote",
+            "Show they can add images and screenshots to their OneNote",
+            "Demonstrate they can open a link in their OneNote",
+            "Show that they can save files to their OneDrive"
+          ],
+          "activity_summary": "We will use teacher led demonstrations and class engagement to ensure that the basic skillsets are learned. We will get the students to update a digital literacy passport as a personal record of how they did things and a verification that the student can do what they are required to do. "
+        },
+        "pedagogical_metadata": {
+          "threshold_concept": false,
+          "learning_strand": "ks3-digital-literacy",
+          "rosenshine_principles": [
+            "small-steps",
+            "guided-practice",
+            "independent-practice"
+          ],
+          "dok_level": {
+            "primary": 2,
+            "range": [
+              1,
+              2
+            ],
+            "rationale": "Some students may have very limited digital skills and some may have more, DOK level 2 would be the highest we would want for them."
+          }
+        },
+        "teaching_episode": [
+          {
+            "segment_type": "introduction",
+            "timing_minutes": 5,
+            "notation_used": "not-applicable",
+            "teacher_actions": "Describe the layout of the room, describe the terminal, demonstrate log in and log out while discussing the processes that occur.",
+            "pupil_actions": "log in and out of their terminals"
+          }
+        ],
+        "preparation": {
+          "resources": [
+            "Powerpoint",
+            "Lab terminal",
+            "Student Terminal"
+          ],
+          "key_vocabulary": [
+            {
+              "term": "Terminal",
+              "tier": "tier2-academic",
+              "polysemous": false
+            }
+          ]
+        }
       }
     }
   ]
