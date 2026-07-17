@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson Plan Editor</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <h1>Lesson Plan Editor</h1>
+  <div class="toolbar">
+    <button id="btn-new" class="btn" type="button">New</button>
+    <button id="btn-open" class="btn" type="button">Open…</button>
+    <button id="btn-save" class="btn btn-primary" type="button">Save</button>
+    <button id="btn-save-as" class="btn" type="button">Save As…</button>
+    <input id="version-note" type="text" placeholder="Version note (optional)">
+  </div>
+  <div id="file-status" class="file-status">untitled.json</div>
+</header>
+
+<div class="app-body">
+  <nav id="tabs-host" class="tabs-host"></nav>
+  <main id="panels-host" class="panels-host"></main>
+  <aside id="validation-host" class="validation-host"></aside>
+</div>
+
+<div id="toast-host" class="toast-host"></div>
+
+<!-- Loaded as plain scripts (no type="module") so the app also runs
+     when index.html is opened directly via file://, where Chromium
+     blocks ES module imports under the file: scheme. Load order
+     matters: each file attaches to the shared `LP` namespace and later
+     files depend on earlier ones being present. -->
+
+<script src="js/core/EventBus.js"></script>
+<script src="js/core/LessonPlanSchema.js"></script>
+<script src="js/core/LessonPlanFactory.js"></script>
+<script src="js/core/LessonPlanValidator.js"></script>
+<script src="js/core/VersionHistory.js"></script>
+
+<script src="js/io/FileIOPort.js"></script>
+<script src="js/io/FileSystemAccessAdapter.js"></script>
+<script src="js/io/DownloadUploadAdapter.js"></script>
+<script src="js/io/FileIOFactory.js"></script>
+
+<script src="js/ui/DomUtils.js"></script>
+<script src="js/ui/FieldRenderer.js"></script>
+<script src="js/ui/ListEditor.js"></script>
+<script src="js/ui/NotificationService.js"></script>
+<script src="js/ui/ValidationPanel.js"></script>
+<script src="js/ui/TabsController.js"></script>
+
+<script src="js/ui/sections/HeaderSection.js"></script>
+<script src="js/ui/sections/LearningSequenceSection.js"></script>
+<script src="js/ui/sections/ExpectedOutcomesSection.js"></script>
+<script src="js/ui/sections/PedagogicalMetadataSection.js"></script>
+<script src="js/ui/sections/PreparationSection.js"></script>
+<script src="js/ui/sections/TeachingEpisodeSection.js"></script>
+<script src="js/ui/sections/EvaluationReflectionSection.js"></script>
+<script src="js/ui/sections/VersionHistorySection.js"></script>
+
+<script src="js/app/AppController.js"></script>
+<script src="js/app/main.js"></script>
+
+</body>
+</html>

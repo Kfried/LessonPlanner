@@ -22,7 +22,7 @@
     "header": {
       "type": "object",
       "description": "Direct equivalent of the proforma's top row (Date / Class / Topic).",
-      "required": ["specification_reference", "topic", "key_stage"],
+      "required": ["topic", "key_stage"],
       "properties": {
         "date": { "type": "string", "format": "date", "description": "Omit or leave null for template/bank lessons not yet scheduled." },
         "year_group": { "type": "string", "description": "Anonymised class identifier only — never an identifiable pupil list. Consistent with the privacy-first architecture." },
@@ -338,6 +338,24 @@
       "properties": {
         "successes": { "type": "string" },
         "action_points": { "type": "string" }
+      }
+    },
+
+    "version_history": {
+      "type": "array",
+      "description": "Editor-managed audit trail. Not part of the pedagogical content itself — appended to automatically by the reference lesson-plan editor each time a file is saved over an existing file.",
+      "items": {
+        "type": "object",
+        "required": ["version", "timestamp", "snapshot"],
+        "properties": {
+          "version": { "type": "integer", "minimum": 1, "description": "1-based, increments once per save-over of an existing file." },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "summary": { "type": "string", "description": "Optional free-text note describing what changed in this version." },
+          "snapshot": {
+            "type": "object",
+            "description": "Full copy of the lesson plan document as it stood at the *start* of this version (i.e. before the edits that produced the current content), excluding version_history itself, to allow restoring an earlier version."
+          }
+        }
       }
     }
   }
