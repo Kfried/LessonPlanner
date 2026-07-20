@@ -1,0 +1,75 @@
+{
+  "lesson_id": "7-T1-NGRT-2",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "NGRT Reading Assessment",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 2 of 10 in the Term 1-2 sequence - standalone NGRT reading assessment, between the Digital Literacy lesson and the start of the 8-lesson PowerPoint unit",
+    "previous_lesson_summary": "Last lesson pupils learned lab rules and the basic digital skills needed to work in the CS room (logging in/out, locking/unlocking, OneNote, OneDrive).",
+    "prerequisite_lesson_ids": ["7-T1-Digital Literacy-1"],
+    "next_lesson_link": "Next lesson begins the PowerPoint unit with Mind Maps, starting the 'About me' presentation golden thread for the term."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils complete the New Group Reading Test (NGRT) under formal test conditions, providing a standardised baseline measure of reading ability to inform teaching and support across the course.",
+    "assessment_criteria": [
+      "Each student will log in to the NGRT platform using their own account.",
+      "Each student will complete the test independently and silently within the given time.",
+      "Each student will submit their completed test through the platform."
+    ],
+    "activity_summary": "Whole-class administration of the standardised NGRT reading assessment under formal test conditions; no new subject content is taught this lesson."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "NGRT-assessment-platform",
+    "application_skill_ids": ["app.ngrt-platform.navigation"],
+    "threshold_concept": false,
+    "eppsem_strategies": ["organisation", "classroom-climate", "behaviour-management"]
+  },
+  "preparation": {
+    "resources": ["Briefing slide", "NGRT assessment platform", "Lab PC", "Student PC"],
+    "key_vocabulary": [
+      { "term": "NGRT", "tier": "tier3-subject-specific", "polysemous": false, "definition": "New Group Reading Test - a standardised assessment used to measure reading ability." },
+      { "term": "invigilate", "tier": "tier2-academic", "polysemous": false, "definition": "To supervise pupils during a formal test to ensure fair and quiet conditions." }
+    ],
+    "additional_adult_role": "Circulate quietly to resolve technical issues (e.g. login problems) without disturbing pupils who are mid-test.",
+    "accessibility": ["Extra time/access arrangements applied per individual pupil plans, as for any formal assessment"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Explain the purpose of the NGRT (a standardised reading assessment, not a pass/fail test) and the formal test conditions: work silently and independently, raise a hand for technical issues, remain seated once finished.",
+      "pupil_actions": "Listen to the briefing and ask any clarifying questions about the test format or conditions before it begins.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "If you finish early, what should you do?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Proceed to the test once the class can correctly state the quiet-finish procedure; otherwise repeat that part of the briefing."
+      }
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 45,
+      "grouping": "individual",
+      "teacher_actions": "Launch the NGRT test for the class on the administration platform and invigilate silently for the duration, resolving only technical issues.",
+      "pupil_actions": "Log in to the NGRT platform with their own account and complete the test independently and silently within the allotted time.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 5,
+      "grouping": "whole-class",
+      "teacher_actions": "Confirm all pupils have submitted their test, close the platform, and briefly explain what the results will be used for (informing future support, not a grade).",
+      "pupil_actions": "Confirm their test has been submitted and pack away.",
+      "notation_used": "verbal-only"
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

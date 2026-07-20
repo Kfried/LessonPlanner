@@ -1,0 +1,110 @@
+{
+  "lesson_id": "7-T1-PowerPoint-Images-5",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "Adding Images and Image Manipulation",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 5 of 10 in the Term 1-2 sequence - Lesson 3 of the 8-lesson PowerPoint unit.",
+    "previous_lesson_summary": "Last lesson pupils transferred their 'About Me' mind map into PowerPoint using outline view, producing slide titles and bullet points.",
+    "prerequisite_lesson_ids": ["7-T1-PowerPoint-Outline-4"],
+    "next_lesson_link": "Next lesson pupils apply a theme, transitions and animations to the slides they have just illustrated."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils know how to find copyright-free images online, understand the range of image manipulation techniques available in PowerPoint, and can manipulate and insert images into their 'About Me' presentation.",
+    "assessment_criteria": [
+      "Each student will find and insert at least one copyright-free image per slide from an appropriate source.",
+      "Each student will apply at least one manipulation technique (crop, resize, or style effect) to an inserted image.",
+      "Each student will be able to explain why a chosen image must be copyright-free."
+    ],
+    "activity_summary": "Individual sourcing of copyright-free images and application of image manipulation techniques to illustrate each slide of pupils' 'About Me' PowerPoint.",
+    "cross_curricular_or_real_world_link": "Understanding copyright applies to any use of online images or media beyond this lesson, including work in other subjects and personal use online."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "Microsoft-PowerPoint",
+    "application_skill_ids": ["app.powerpoint.image-insertion", "app.powerpoint.image-manipulation"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["daily-review", "models", "guided-practice", "independent-practice"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons", "cognitive-load-management"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "making-links-explicit", "assessment-for-learning"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "List of copyright-free image sources", "Pupils' outlined PowerPoint from Lesson 4"],
+    "key_vocabulary": [
+      { "term": "copyright-free", "tier": "tier2-academic", "polysemous": false, "definition": "An image or media file that is free to use and reuse without infringing the creator's rights, e.g. released under a suitable licence." },
+      { "term": "crop", "tier": "tier3-subject-specific", "polysemous": true, "definition": "To cut away unwanted parts of an image; everyday meaning relates to farming." }
+    ],
+    "additional_adult_role": "Support pupils who struggle to find a relevant copyright-free image, offering a pre-vetted alternative source list.",
+    "send_five_a_day": ["explicit-instruction", "scaffolding"],
+    "accessibility": ["Pre-vetted image source list available for pupils who need extra support searching independently"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Ask pupils to open their PowerPoint and count how many slides currently have no image.",
+      "pupil_actions": "Open their PowerPoint and note the number of slides needing an image.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Why do we use PowerPoint rather than just talking through our ideas?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils give a reasonable answer (visual support, structure); otherwise briefly recap."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Explain what copyright-free means and why it matters, then demonstrate searching for and downloading a copyright-free image from an approved source.",
+      "pupil_actions": "Watch the demonstration and identify what makes a source trustworthy for copyright-free images.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Why can't we just use any image we find in a search engine?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Move to modelling manipulation regardless; readdress copyright if the class is confused."
+      }
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Model inserting an image into a slide, then cropping, resizing, and applying a style effect, thinking aloud about how each change affects the slide's appearance.",
+      "pupil_actions": "Watch and note one manipulation technique they want to try first.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 25,
+      "grouping": "individual",
+      "teacher_actions": "Set the task of sourcing and inserting a copyright-free image on each slide, then manipulating at least one; circulate with least-help-first prompts.",
+      "pupil_actions": "Find, insert, and manipulate copyright-free images across their 'About Me' slides.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Have you applied at least one manipulation technique to one of your images?",
+        "format": "other",
+        "decision_rule": "Pupils with no manipulation applied by the 15-minute mark are shown the technique again individually."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "grouping": "pair",
+      "teacher_actions": "Facilitate a paired swap-and-check for appropriate, well-manipulated images; cold-call two pairs to share one image choice and why it suits the slide.",
+      "pupil_actions": "Swap with a partner, check images are relevant and manipulated appropriately, and give one piece of feedback.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: name one manipulation technique you used and which slide you used it on.",
+        "format": "other",
+        "decision_rule": "Pupils unable to name a technique are flagged for a brief recap at the start of next lesson."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

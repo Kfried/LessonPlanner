@@ -1,0 +1,109 @@
+{
+  "lesson_id": "7-T1-PowerPoint-Outline-4",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "Introduction to PowerPoint and Outline View Mode",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 4 of 10 in the Term 1-2 sequence - Lesson 2 of the 8-lesson PowerPoint unit.",
+    "previous_lesson_summary": "Last lesson pupils created an 'About Me' mind map with a central theme, main branches, and sub-branches.",
+    "prerequisite_lesson_ids": ["7-T1-Mindmaps-3"],
+    "next_lesson_link": "Next lesson pupils add copyright-free images to the slides they have just outlined."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils can describe why PowerPoint is used, open and save a new PowerPoint file, describe what outline view is and what it is used for, and can transfer the information from their 'About Me' mind map into outline view.",
+    "assessment_criteria": [
+      "Each student will open a new PowerPoint file and save it to their OneDrive.",
+      "Each student will switch to outline view and explain what it is used for.",
+      "Each student will transfer at least three branches from their mind map into the outline as slide titles with bullet points."
+    ],
+    "activity_summary": "Individual construction of a PowerPoint outline directly from each pupil's own 'About Me' mind map, using outline view to turn branches into slide titles and sub-branches into bullet points."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "Microsoft-PowerPoint",
+    "application_skill_ids": ["app.powerpoint.file-management", "app.powerpoint.outline-view"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["daily-review", "small-steps", "models", "guided-practice"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons", "schema-building"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "making-links-explicit", "assessment-for-learning"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Pupils' completed mind maps from Lesson 3"],
+    "key_vocabulary": [
+      { "term": "outline view", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A PowerPoint view that shows slide titles and bullet points as a structured text list, without slide design visible." },
+      { "term": "OneDrive", "tier": "tier3-subject-specific", "polysemous": false, "definition": "Microsoft's cloud storage service used to save and access files from any device." }
+    ],
+    "additional_adult_role": "Support pupils who cannot locate their saved mind map, using File Explorer/OneNote to help them find it before the outline task begins.",
+    "send_five_a_day": ["explicit-instruction", "scaffolding"],
+    "accessibility": ["Step-by-step printed instruction card for opening, saving, and switching to outline view"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Ask pupils to open their saved mind map and identify, on mini-whiteboards, its central theme and how many main branches it has.",
+      "pupil_actions": "Open their mind map and note the central theme and branch count.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "What is a mind map used for?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils can state 'planning'/'organising ideas'; otherwise briefly recap."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 8,
+      "grouping": "whole-class",
+      "teacher_actions": "Explain why PowerPoint is used for presentations, and model opening a new PowerPoint file and saving it to OneDrive with a sensible file name.",
+      "pupil_actions": "Watch the demonstration and identify the Save and Save As options.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 12,
+      "grouping": "whole-class",
+      "teacher_actions": "Model switching to outline view and transferring a sample mind map's branches into slide titles and bullet points, thinking aloud about how a main branch becomes a slide title and a sub-branch becomes a bullet.",
+      "pupil_actions": "Watch and question; identify verbally when a new slide title versus a new bullet point should be added.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Should this branch be a new slide title or a bullet point under the current slide?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Move to independent construction regardless; use responses to judge how much further modelling is needed."
+      }
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 25,
+      "grouping": "individual",
+      "teacher_actions": "Set the outline construction task using pupils' own mind maps; circulate offering least-help-first prompts to pupils who have stalled.",
+      "pupil_actions": "Open a new PowerPoint, save it to OneDrive, switch to outline view, and transfer their mind map's branches and sub-branches into slide titles and bullet points.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Have you got a slide title for each main branch of your mind map?",
+        "format": "other",
+        "decision_rule": "Pupils below three slide titles at the 15-minute mark receive a targeted prompt referencing their mind map."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Cold-call two pupils to share their outline under the visualiser; class checks that slide titles match main branches and bullets match sub-branches.",
+      "pupil_actions": "Compare their own outline against the shared examples and correct any mismatches.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: how many slides does your outline currently have?",
+        "format": "other",
+        "decision_rule": "Pupils with fewer than three slides are flagged for a brief catch-up prompt at the start of next lesson."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

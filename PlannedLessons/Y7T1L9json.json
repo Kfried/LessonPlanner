@@ -1,0 +1,104 @@
+{
+  "lesson_id": "7-T1-PowerPoint-Automation-9",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "Automating Your PowerPoint and Final Improvements",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 9 of 10 in the Term 1-2 sequence - Lesson 7 of the 8-lesson PowerPoint unit.",
+    "previous_lesson_summary": "Last lesson pupils added an internal and an external URL to their 'About Me' presentation.",
+    "prerequisite_lesson_ids": ["7-T1-PowerPoint-URLs-8"],
+    "next_lesson_link": "Next lesson pupils present their completed 'About Me' PowerPoint to the class, concluding the unit."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils know that PowerPoints can be automated, understand how to apply the correct settings for a timed, self-running presentation, and can automate their 'About Me' presentation while making final improvements against the term's assessment criteria.",
+    "assessment_criteria": [
+      "Each student will set appropriate slide timings using rehearse timings or manual entry.",
+      "Each student will produce a presentation that runs automatically without manual clicking.",
+      "Each student will check their presentation against the unit's assessment criteria (mind-map-based structure, manipulated images, theme/transitions/animations, sound/video, internal and external URLs) and make at least one final improvement."
+    ],
+    "activity_summary": "Individual application of slide timing/automation settings, followed by a self-review against the whole unit's assessment criteria and final improvements ahead of presenting."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "Microsoft-PowerPoint",
+    "application_skill_ids": ["app.powerpoint.slide-timing", "app.powerpoint.self-running-presentation"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["daily-review", "models", "independent-practice", "weekly-monthly-review"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons", "spaced-practice-within-lesson"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "assessment-for-learning", "plenary"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Unit assessment criteria checklist (Lessons 3-8)", "Pupils' PowerPoint from Lesson 8"],
+    "key_vocabulary": [
+      { "term": "rehearse timings", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A PowerPoint feature that records how long a presenter spends on each slide, to set automatic timings." },
+      { "term": "self-running", "tier": "tier2-academic", "polysemous": false, "definition": "A presentation that advances through its slides automatically, without a presenter clicking through it." }
+    ],
+    "additional_adult_role": "Support pupils in setting realistic slide timings (neither too fast to read nor too slow to hold attention).",
+    "send_five_a_day": ["explicit-instruction", "scaffolding", "cognitive-metacognitive-strategies"],
+    "accessibility": ["Printed unit checklist available as an alternative to an on-screen version for the self-review"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Ask pupils to note, on mini-whiteboards, where their internal and external links go on their presentation.",
+      "pupil_actions": "Recall and note their internal and external link destinations.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "What is the difference between an internal and an external URL?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils correctly distinguish the two; otherwise briefly recap."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 8,
+      "grouping": "whole-class",
+      "teacher_actions": "Explain that a PowerPoint can be set to advance automatically, and introduce the rehearse-timings and manual-timing settings.",
+      "pupil_actions": "Watch and identify where the timing settings are found.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 8,
+      "grouping": "whole-class",
+      "teacher_actions": "Model rehearsing timings on a sample presentation, then play it back in slideshow mode to show it advancing automatically.",
+      "pupil_actions": "Watch and note whether the automatic timing felt too fast, too slow, or about right.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 24,
+      "grouping": "individual",
+      "teacher_actions": "Set the task of automating their presentation and then reviewing it against the unit assessment criteria checklist, making at least one final improvement; circulate with least-help-first prompts.",
+      "pupil_actions": "Set slide timings to automate their presentation, then review it against the checklist (mind-map-based structure, images, theme/transitions/animations, sound/video, internal and external URLs) and make final improvements.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Does your presentation run automatically from start to finish without you clicking?",
+        "format": "live-code-check",
+        "decision_rule": "Pupils whose automation fails are supported individually before moving to the checklist review."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 15,
+      "grouping": "pair",
+      "teacher_actions": "Facilitate a paired final checklist review; cold-call two pairs to share one improvement they made this lesson and why.",
+      "pupil_actions": "Swap with a partner, check the presentation against the full unit checklist, and confirm it is ready to present next lesson.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: which item on the unit checklist did you improve today?",
+        "format": "other",
+        "decision_rule": "Pupils whose presentation is missing a checklist item are flagged to complete it before next lesson's presenting session."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

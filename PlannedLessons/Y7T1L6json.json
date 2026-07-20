@@ -1,0 +1,110 @@
+{
+  "lesson_id": "7-T1-PowerPoint-Styles-6",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "Styles and Themes (Transitions, Animations, Design)",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 6 of 10 in the Term 1-2 sequence - Lesson 4 of the 8-lesson PowerPoint unit.",
+    "previous_lesson_summary": "Last lesson pupils sourced and manipulated copyright-free images to illustrate their 'About Me' slides.",
+    "prerequisite_lesson_ids": ["7-T1-PowerPoint-Images-5"],
+    "next_lesson_link": "Next lesson pupils add sound and video to their themed 'About Me' presentation."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils know where to locate the options for styles, themes, transitions and animations, understand the effect of applying these tools to a PowerPoint, and can apply styles and themes to their 'About Me' presentation.",
+    "assessment_criteria": [
+      "Each student will apply a consistent theme across all slides.",
+      "Each student will apply a slide transition.",
+      "Each student will apply at least one animation and explain why they chose it (or chose not to overuse animation)."
+    ],
+    "activity_summary": "Individual application of a consistent theme, transitions, and simple animations to pupils' 'About Me' PowerPoint, with an explicit check that choices support rather than distract from the content."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "Microsoft-PowerPoint",
+    "application_skill_ids": ["app.powerpoint.theme-design", "app.powerpoint.transitions-animations"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["daily-review", "models", "independent-practice"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "personalised-learning", "assessment-for-learning"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Pupils' illustrated PowerPoint from Lesson 5"],
+    "key_vocabulary": [
+      { "term": "theme", "tier": "tier3-subject-specific", "polysemous": true, "definition": "A pre-set combination of colours, fonts and effects applied consistently across a presentation; everyday meaning relates to a subject or topic." },
+      { "term": "transition", "tier": "tier3-subject-specific", "polysemous": false, "definition": "The visual effect used when moving from one slide to the next." },
+      { "term": "animation", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A visual effect applied to an individual element (e.g. text or an image) on a slide." }
+    ],
+    "additional_adult_role": "Support pupils who apply excessive or clashing animations, prompting them to justify each choice against readability.",
+    "send_five_a_day": ["explicit-instruction", "scaffolding"],
+    "accessibility": ["Guidance to avoid high-flicker transitions/animations for pupils sensitive to rapid visual movement"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Ask pupils to find and note, on mini-whiteboards, where they found copyright-free images last lesson.",
+      "pupil_actions": "Recall and note the image source(s) they used.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "Why does an image need to be copyright-free before we use it?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils give a correct reason; otherwise briefly re-discuss."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 8,
+      "grouping": "whole-class",
+      "teacher_actions": "Show where the Design, Transitions and Animations tabs are located in PowerPoint, and explain the difference between a theme (whole-presentation), a transition (between slides), and an animation (within a slide).",
+      "pupil_actions": "Watch and identify which tab controls which effect.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 12,
+      "grouping": "whole-class",
+      "teacher_actions": "Model applying a theme, a transition, and an animation to a sample slide, then contrast this with a deliberately over-animated slide, discussing why the second is harder to follow.",
+      "pupil_actions": "Compare the two examples and identify what makes the over-animated one distracting.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "What made the second example harder to follow than the first?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Move to independent practice regardless; use responses to set the expectation of restraint."
+      }
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 25,
+      "grouping": "individual",
+      "teacher_actions": "Set the task of applying a consistent theme, transitions, and considered animations across all slides; circulate to check choices support rather than distract from content.",
+      "pupil_actions": "Apply a theme, transitions, and animations to their 'About Me' PowerPoint, checking each choice against readability.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Is your theme applied consistently across every slide?",
+        "format": "other",
+        "decision_rule": "Pupils with an inconsistent theme at the 15-minute mark are shown how to apply it to all slides at once."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Cold-call two pupils to present one slide under the visualiser; class judges whether the theme/transitions/animations support or distract from the content.",
+      "pupil_actions": "Compare their own choices against the shared examples and adjust if needed.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: name one animation you chose and why you chose it.",
+        "format": "other",
+        "decision_rule": "Pupils giving no reasoning beyond 'it looked good' are flagged for a brief recap on purposeful design choices next lesson."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

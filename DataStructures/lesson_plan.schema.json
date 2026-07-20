@@ -61,7 +61,11 @@
           "items": { "type": "string" },
           "minItems": 1
         },
-        "activity_summary": { "type": "string" }
+        "activity_summary": { "type": "string" },
+        "cross_curricular_or_real_world_link": {
+          "type": "string",
+          "description": "EPPSEM 'making links explicit' — the explicit link this lesson draws (or should draw) between this content and another subject or life beyond the classroom. Excellent-school teachers were significantly more consistent at stating this aloud than good/poor-school teachers; leave unset only if no meaningful link exists for this lesson."
+        }
       }
     },
 
@@ -138,10 +142,34 @@
             ]
           }
         },
+        "cognitive_science_principles": {
+          "type": "array",
+          "description": "Which applied-cognitive-science techniques (EEF, Cognitive science approaches in the classroom, 2021) the segments visibly enact — spacing, interleaving, retrieval practice, cognitive load management, dual coding, schema-building, embodied learning. Low-ambiguity — may be auto-detected at Stage 1 rather than routed through moderation, the same way rosenshine_principles is. Applies to any learning_strand.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "spaced-practice-across-lessons", "spaced-practice-within-lesson",
+              "interleaving", "retrieval-practice", "cognitive-load-management",
+              "dual-coding", "schema-building", "embodied-learning"
+            ]
+          }
+        },
+        "eppsem_strategies": {
+          "type": "array",
+          "description": "Which of the 11 EPPSEM effective-pedagogy strategies (Siraj-Blatchford et al., DFE-RR129, 2011 — the strategies that most consistently separated 'excellent' from 'poor' schools in the underlying observational study) the lesson visibly enacts. Low-ambiguity — may be auto-detected at Stage 1 rather than routed through moderation. 'organisation' and 'shared-objectives' should normally be present in every well-formed lesson; their absence is itself a signal worth checking during moderation.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "organisation", "shared-objectives", "homework", "classroom-climate",
+              "behaviour-management", "collaborative-learning", "personalised-learning",
+              "making-links-explicit", "dialogic-teaching", "assessment-for-learning", "plenary"
+            ]
+          }
+        },
 
         "dok_level": {
           "type": "object",
-          "description": "ks3-ks4-programming-track only (Webb's DOK is usable pre-GCSE, but only this strand's AO mapping ties it to exam-board weighting — see allOf below). Moderated — cognitive complexity demanded by the lesson's tasks, judged independently of the objective's verb wording.",
+          "description": "Usable for any learning_strand — Webb's DOK measures cognitive complexity, not subject matter, so it is not restricted to ks3-ks4-programming-track. Only that strand's assessment_objectives ties DOK to exam-board AO weighting; on other strands dok_level still records the cognitive demand of the tasks without an AO mapping. Moderated — cognitive complexity demanded by the lesson's tasks, judged independently of the objective's verb wording.",
           "required": ["primary", "rationale"],
           "properties": {
             "primary": { "type": "integer", "minimum": 1, "maximum": 4 },
@@ -291,6 +319,11 @@
           "timing_minutes": { "type": "integer", "minimum": 1 },
           "teacher_actions": { "type": "string" },
           "pupil_actions": { "type": "string" },
+          "grouping": {
+            "type": "string",
+            "enum": ["whole-class", "individual", "pair", "small-group", "mixed"],
+            "description": "EPPSEM 'collaborative learning' — the working arrangement for this segment. Genuine collaborative learning requires 'pair'/'small-group' segments with a shared task, not just proximity; a lesson with no non-whole-class, non-individual segment at all has no collaborative-learning evidence to tag at the pedagogical_metadata level."
+          },
           "notation_used": {
             "type": "string",
             "enum": [
@@ -319,6 +352,23 @@
               "decision_rule": { "type": "string", "description": "What the teacher does on strong vs weak response, e.g. 'advance if >80% correct, else reteach with worked example'." }
             }
           }
+        }
+      }
+    },
+
+    "homework": {
+      "type": ["object", "null"],
+      "description": "EPPSEM 'homework' finding — homework only correlated with better outcomes when directly linked to the lesson's own objective (consolidating a taught skill, or extending it), not when set merely because policy requires it. Null/omit if no homework is set for this lesson; do not set 'task' without 'links_to_objective'.",
+      "properties": {
+        "task": { "type": "string" },
+        "purpose": {
+          "type": "string",
+          "enum": ["consolidation", "extension", "preparation-for-next-lesson"],
+          "description": "consolidation: practises a skill/fact taught this lesson (e.g. spellings, times tables, syntax). extension: applies this lesson's learning to a new case. preparation-for-next-lesson: primes content the next lesson will build on (a form of pre-lesson spaced retrieval)."
+        },
+        "links_to_objective": {
+          "type": "string",
+          "description": "How this task connects to expected_outcomes.lesson_objective. An unrationalised homework task is not moderatable, per the same principle as dok_level.rationale."
         }
       }
     },

@@ -1,0 +1,104 @@
+{
+  "lesson_id": "7-T1-PowerPoint-Sound-Video-7",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "Adding Sound and Video",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 7 of 10 in the Term 1-2 sequence - Lesson 5 of the 8-lesson PowerPoint unit.",
+    "previous_lesson_summary": "Last lesson pupils applied a consistent theme, transitions, and animations to their 'About Me' presentation.",
+    "prerequisite_lesson_ids": ["7-T1-PowerPoint-Styles-6"],
+    "next_lesson_link": "Next lesson pupils add internal and external URLs to their presentation."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils know where to locate the options for sound and video, understand the different audio and video options available within PowerPoint, and can add appropriate sound and/or video content to their 'About Me' presentation.",
+    "assessment_criteria": [
+      "Each student will locate and use the audio or video insertion options in PowerPoint.",
+      "Each student will insert at least one piece of appropriate sound or video content into their presentation.",
+      "Each student will test their inserted media plays correctly in slideshow mode."
+    ],
+    "activity_summary": "Individual addition of appropriate audio and/or video content to pupils' 'About Me' PowerPoint, followed by testing playback in slideshow mode."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "Microsoft-PowerPoint",
+    "application_skill_ids": ["app.powerpoint.audio-insertion", "app.powerpoint.video-insertion"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["daily-review", "models", "independent-practice"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons", "dual-coding"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "assessment-for-learning"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Headphones (where available)", "Pupils' themed PowerPoint from Lesson 6"],
+    "key_vocabulary": [
+      { "term": "narration", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A recorded voice track added to a slide or presentation." },
+      { "term": "embed", "tier": "tier2-academic", "polysemous": true, "definition": "To insert a file (e.g. audio or video) directly into a slide; everyday meaning relates to fixing something firmly in place." }
+    ],
+    "additional_adult_role": "Support pupils with sourcing or recording appropriate audio (e.g. a short narration clip) if they do not have a suitable existing file.",
+    "send_five_a_day": ["explicit-instruction", "scaffolding", "technology"],
+    "accessibility": ["Headphones with volume control available", "Captioned or transcript-supported video sources offered where relevant"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Ask pupils to open their PowerPoint and note, on mini-whiteboards, which tab they used to apply their theme last lesson.",
+      "pupil_actions": "Recall and note the Design tab, and one transition or animation they applied.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "What effect does a transition have, compared to an animation?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils correctly distinguish the two; otherwise briefly recap."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 8,
+      "grouping": "whole-class",
+      "teacher_actions": "Show where the audio and video insertion options are located, and explain the different options available (inserting a video file, recording narration, inserting an audio clip).",
+      "pupil_actions": "Watch and identify which option they think best suits their own presentation.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Model inserting a short video clip on one slide and recording a brief narration on another, then play both back to check they work in slideshow mode.",
+      "pupil_actions": "Watch and note the steps needed to insert and test each type of media.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 27,
+      "grouping": "individual",
+      "teacher_actions": "Set the task of adding appropriate sound and/or video to their presentation; circulate with least-help-first prompts, including for pupils choosing to record their own narration.",
+      "pupil_actions": "Insert appropriate sound and/or video content into their 'About Me' presentation and test it plays correctly.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Have you tested your inserted media plays correctly in slideshow mode?",
+        "format": "live-code-check",
+        "decision_rule": "Pupils whose media fails to play are supported individually before moving on."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "grouping": "pair",
+      "teacher_actions": "Facilitate a paired listen-and-check; cold-call two pairs to share what media they added and why.",
+      "pupil_actions": "Swap with a partner, listen to/watch each other's inserted media, and give one piece of feedback.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: what sound or video did you add, and to which slide?",
+        "format": "other",
+        "decision_rule": "Pupils who have not yet added any media are flagged for a brief catch-up prompt at the start of next lesson."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

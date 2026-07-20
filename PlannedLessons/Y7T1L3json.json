@@ -1,0 +1,112 @@
+{
+  "lesson_id": "7-T1-Mindmaps-3",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "Mindmaps",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 3 of 10 in the Term 1-2 sequence - Lesson 1 of the 8-lesson PowerPoint unit, and the start of the 'About me' presentation golden thread.",
+    "previous_lesson_summary": "Last lesson pupils completed the NGRT reading assessment; before that, in Lesson 1, they learned lab rules and basic digital skills (OneNote, OneDrive, file handling).",
+    "prerequisite_lesson_ids": ["7-T1-Digital Literacy-1"],
+    "next_lesson_link": "Next lesson pupils transfer their mind map into PowerPoint's outline view, beginning the 'About me' presentation itself."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils can describe what a mind map is, why it is used, and how it is used in planning, and can create a mind map about themselves with a central theme, at least three main branches, and at least two levels of sub-branching.",
+    "assessment_criteria": [
+      "Each student will create a central node clearly labelled as themselves ('About Me').",
+      "Each student will add at least three main branches (e.g. favourite subject, food, movie, hobby).",
+      "Each student will add sub-branches beneath at least two main branches, aiming for the highest level of structure they can reach (Structural to Extended).",
+      "Each student will identify and label the constituent parts of a mind map (central theme, nodes, sub-nodes) when asked."
+    ],
+    "activity_summary": "Individual construction of an 'About Me' mind map recording favourite subject, food, movie, things to watch, a hobby, favourite thing at school, and a recent achievement, built up through four increasingly detailed structural levels.",
+    "cross_curricular_or_real_world_link": "Mind maps are a general-purpose planning tool used across subjects (e.g. planning an essay in English, revising a topic in Science) and in life beyond school (e.g. planning a project or an event)."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "generic-mindmap-software",
+    "application_skill_ids": ["app.mindmap.central-node", "app.mindmap.hierarchical-structure"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["small-steps", "models", "guided-practice", "independent-practice"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons", "schema-building"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "personalised-learning", "making-links-explicit", "assessment-for-learning"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Mind-mapping software licence access", "Worked example mind map (printed or on-screen)"],
+    "key_vocabulary": [
+      { "term": "mind map", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A diagram used to visually organise information around a central theme, with branching nodes and sub-nodes." },
+      { "term": "node", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A single idea or point on a mind map, connected by a branch to the central theme or to another node." },
+      { "term": "hierarchy", "tier": "tier2-academic", "polysemous": false, "definition": "An ordering of ideas from general (central) to specific (sub-branches)." }
+    ],
+    "additional_adult_role": "Support pupils who default to a linear list rather than a branching structure, using the worked example to prompt re-grouping into main branches and sub-branches.",
+    "send_five_a_day": ["explicit-instruction", "scaffolding", "flexible-grouping"],
+    "accessibility": ["Printed worked example as an alternative to the on-screen model", "Sentence starters provided for pupils who need support generating personal facts"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Display three quick-fire questions recapping Lesson 1: lab rules, opening OneNote, opening File Explorer to the documents folder.",
+      "pupil_actions": "Individually note answers on mini-whiteboards.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "Where do you go to find your saved files?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils correctly name File Explorer/documents; otherwise briefly re-demonstrate."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Explain what a mind map is, why it is used, and how it supports planning; introduce the constituent parts (central theme, nodes, sub-nodes) using a worked example unrelated to 'About Me'.",
+      "pupil_actions": "Watch the worked example and identify the central theme, a node, and a sub-node when asked.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "In this example, which part is the central theme and which is a node?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Move to modelling regardless; use responses to judge how much further explanation of hierarchy is needed."
+      }
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Model live construction of a central node and three main branches in the mind-mapping software for a sample 'favourite things' topic, then add a second level of sub-branches, thinking aloud about how each idea relates to its parent.",
+      "pupil_actions": "Watch and note the difference between adding a new main branch and adding a sub-branch of an existing one.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 25,
+      "grouping": "individual",
+      "teacher_actions": "Set the 'About Me' mind map task, explaining the four differentiated structure levels (Structural, Multi-structural, Relational, Extended); circulate offering least-help-first prompts to pupils stalled at a linear list.",
+      "pupil_actions": "Individually record personal facts (favourite subject, food, movie, things to watch, a hobby, favourite thing at school, a recent achievement) and build their 'About Me' mind map, working up through the four levels as time allows.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Does your mind map have at least two branches with a sub-branch beneath them yet?",
+        "format": "other",
+        "decision_rule": "Pupils still on a single-level list at the 15-minute mark receive a targeted prompt referencing the worked example."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "grouping": "pair",
+      "teacher_actions": "Facilitate a paired swap-and-check against the four structure levels; cold-call two pairs to share which level they reached and one branch they are proud of.",
+      "pupil_actions": "Swap with a partner, identify which structural level the partner's mind map has reached, and give one piece of specific feedback.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: which structural level did your mind map reach, and what was your central theme?",
+        "format": "other",
+        "decision_rule": "Pupils reporting only Level 1 are flagged for a brief recap at the start of next lesson before starting the PowerPoint outline."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

@@ -1,0 +1,110 @@
+{
+  "lesson_id": "7-T1-PowerPoint-Presenting-10",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "How to Present and Deliver your PowerPoint",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 10 of 10 in the Term 1-2 sequence - final lesson of the 8-lesson PowerPoint unit, concluding the 'About me' presentation golden thread for the term.",
+    "previous_lesson_summary": "Last lesson pupils automated their presentation's slide timings and made final improvements against the full unit checklist.",
+    "prerequisite_lesson_ids": ["7-T1-PowerPoint-Automation-9"],
+    "next_lesson_link": "This is the final lesson of the Term 1-2 sequence; the next unit begins next term."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils know the different techniques used to deliver a presentation, understand and evaluate what makes a presentation good, and can present by delivering their completed 'About Me' PowerPoint to the class.",
+    "assessment_criteria": [
+      "Each student will deliver their 'About Me' presentation to the class or a small group.",
+      "Each student will use at least two delivery techniques discussed in the lesson (e.g. eye contact, pace, not reading directly from the slide).",
+      "Each student will give at least one piece of specific, constructive feedback to a peer using the success criteria."
+    ],
+    "activity_summary": "Whole-class or small-group delivery of pupils' completed 'About Me' PowerPoint, with structured peer feedback against agreed success criteria, concluding the unit.",
+    "cross_curricular_or_real_world_link": "Presentation delivery skills (eye contact, pace, structure) are used across subjects wherever pupils present work aloud, and in life beyond school in any situation requiring public speaking."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "Microsoft-PowerPoint",
+    "application_skill_ids": ["app.presentation-skills.delivery", "app.presentation-skills.peer-feedback"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["daily-review", "models", "independent-practice", "checking-for-understanding"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons", "dual-coding"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "collaborative-learning", "dialogic-teaching", "assessment-for-learning", "plenary"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Peer-feedback checklist", "Pupils' completed PowerPoint from Lesson 9", "Projector/front-of-room screen"],
+    "key_vocabulary": [
+      { "term": "delivery", "tier": "tier2-academic", "polysemous": true, "definition": "The way a presentation is spoken and performed to an audience; everyday meaning relates to transporting goods." },
+      { "term": "success criteria", "tier": "tier2-academic", "polysemous": false, "definition": "An agreed, specific set of statements describing what a good version of the task looks like, used to give and receive feedback." }
+    ],
+    "additional_adult_role": "Offer a lower-pressure small-group presenting option for pupils who need it, rather than whole-class delivery, while still meeting the assessment criteria.",
+    "send_five_a_day": ["explicit-instruction", "flexible-grouping", "cognitive-metacognitive-strategies"],
+    "accessibility": ["Small-group presenting option for anxious pupils", "Presenter notes permitted rather than requiring fully memorised delivery"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Ask pupils to open their finished presentation and note, on mini-whiteboards, one thing they are proud of in it.",
+      "pupil_actions": "Recall and note one strength of their finished 'About Me' presentation.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "What does it mean for a presentation to be 'self-running'?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils correctly recall automation; otherwise briefly recap."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 8,
+      "grouping": "whole-class",
+      "teacher_actions": "Introduce delivery techniques (eye contact, pace, projecting your voice, not reading directly from the slide, a clear introduction and conclusion) and agree success criteria for peer feedback as a class.",
+      "pupil_actions": "Discuss and help agree the success criteria that will be used for feedback.",
+      "notation_used": "verbal-only"
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 7,
+      "grouping": "whole-class",
+      "teacher_actions": "Model delivering a short presentation using the agreed techniques, thinking aloud about pace and eye contact, then invite the class to give one piece of feedback against the success criteria.",
+      "pupil_actions": "Watch the model and give one piece of feedback against the success criteria.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Which success criterion did the model presentation meet most clearly?",
+        "format": "verbal-cold-call",
+        "decision_rule": "Move to presenting regardless; use responses to check the success criteria are understood."
+      }
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 25,
+      "grouping": "small-group",
+      "teacher_actions": "Organise presenting in small groups (or to the whole class, depending on time and confidence), circulating to observe delivery and prompt use of the agreed techniques.",
+      "pupil_actions": "Deliver their completed 'About Me' PowerPoint to their group or the class, using at least two agreed delivery techniques, and give structured peer feedback using the checklist.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Did you use eye contact and avoid reading directly from the slide?",
+        "format": "other",
+        "decision_rule": "Pupils who read directly throughout are given one specific technique to focus on for their next presentation opportunity."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 15,
+      "grouping": "whole-class",
+      "teacher_actions": "Bring the class together to reflect on the whole unit: what pupils found easiest, hardest, and most improved between their mind map and their final presentation.",
+      "pupil_actions": "Share one thing they improved between their mind map and their final presentation, and one delivery technique they want to keep working on.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "Exit ticket: which delivery technique will you focus on next time you present?",
+        "format": "other",
+        "decision_rule": "No pass threshold; responses inform which delivery techniques to revisit at the start of the next presenting opportunity."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

@@ -1,0 +1,116 @@
+{
+  "lesson_id": "7-T1-PowerPoint-URLs-8",
+  "header": {
+    "year_group": "Year 7",
+    "topic": "URLs (Internal and External)",
+    "key_stage": "KS3",
+    "exam_board": "board-agnostic",
+    "duration_minutes": 60
+  },
+  "learning_sequence_context": {
+    "position_in_sequence": "Lesson 8 of 10 in the Term 1-2 sequence - Lesson 6 of the 8-lesson PowerPoint unit.",
+    "previous_lesson_summary": "Last lesson pupils added appropriate sound and/or video content to their 'About Me' presentation.",
+    "prerequisite_lesson_ids": ["7-T1-PowerPoint-Sound-Video-7"],
+    "next_lesson_link": "Next lesson pupils automate their presentation's timings and make final improvements ahead of presenting."
+  },
+  "expected_outcomes": {
+    "lesson_objective": "Pupils know what a URL is and how to embed one in a PowerPoint, understand the difference between an internal URL and an external URL, and can add both to their 'About Me' presentation.",
+    "assessment_criteria": [
+      "Each student will insert at least one internal URL that links to another slide within their own presentation.",
+      "Each student will insert at least one external URL that links to a relevant website.",
+      "Each student will test both links work correctly in slideshow mode."
+    ],
+    "activity_summary": "Individual addition of an internal hyperlink (e.g. back to a contents slide) and an external hyperlink (e.g. to a website relevant to a hobby) within pupils' 'About Me' presentation.",
+    "cross_curricular_or_real_world_link": "Hyperlinks are the basic mechanism of navigation on the web, connecting this lesson to how websites and online documents are structured more generally."
+  },
+  "pedagogical_metadata": {
+    "learning_strand": "ks3-digital-literacy",
+    "notation_form": "application-gui",
+    "tool": "Microsoft-PowerPoint",
+    "application_skill_ids": ["app.powerpoint.hyperlink-internal", "app.powerpoint.hyperlink-external"],
+    "threshold_concept": false,
+    "rosenshine_principles": ["daily-review", "models", "guided-practice", "independent-practice"],
+    "cognitive_science_principles": ["retrieval-practice", "spaced-practice-across-lessons"],
+    "eppsem_strategies": ["organisation", "shared-objectives", "making-links-explicit", "assessment-for-learning"]
+  },
+  "preparation": {
+    "resources": ["PowerPoint presentation", "Internet access", "Pupils' PowerPoint from Lesson 7"],
+    "key_vocabulary": [
+      { "term": "URL", "tier": "tier3-subject-specific", "polysemous": false, "definition": "Uniform Resource Locator - the address of a specific resource (e.g. a web page) on the internet." },
+      { "term": "hyperlink", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A clickable link, often embedded in text or an object, that jumps to another slide, file, or web page." },
+      { "term": "internal link", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A hyperlink that jumps to another location within the same presentation." },
+      { "term": "external link", "tier": "tier3-subject-specific", "polysemous": false, "definition": "A hyperlink that opens a website or resource outside the presentation." }
+    ],
+    "additional_adult_role": "Support pupils in identifying a genuinely relevant and appropriate external website to link to (e.g. related to a stated hobby).",
+    "send_five_a_day": ["explicit-instruction", "scaffolding"],
+    "accessibility": ["Pre-checked list of appropriate external websites available for pupils who need support choosing a link"]
+  },
+  "teaching_episode": [
+    {
+      "segment_type": "do_now",
+      "timing_minutes": 5,
+      "grouping": "individual",
+      "teacher_actions": "Ask pupils to note, on mini-whiteboards, one piece of sound or video they added last lesson and which slide it is on.",
+      "pupil_actions": "Recall and note their added media and its slide location.",
+      "notation_used": "verbal-only",
+      "check_for_understanding": {
+        "question": "What is one way you can add sound to a PowerPoint?",
+        "format": "mini-whiteboard",
+        "decision_rule": "Proceed if most pupils can name at least one method; otherwise briefly recap."
+      }
+    },
+    {
+      "segment_type": "introduction",
+      "timing_minutes": 8,
+      "grouping": "whole-class",
+      "teacher_actions": "Explain what a URL is and how to embed a hyperlink in PowerPoint, then explain the difference between an internal URL (jumps to another slide) and an external URL (opens a website).",
+      "pupil_actions": "Watch and identify, for given examples, whether each is an internal or external link.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Is a link that jumps to slide 3 of the same presentation internal or external?",
+        "format": "hinge-mcq",
+        "distractors": [
+          { "option": "Internal" },
+          { "option": "External" }
+        ],
+        "decision_rule": "Advance to modelling if near-unanimous correct; otherwise give a second worked example."
+      }
+    },
+    {
+      "segment_type": "provide_model",
+      "timing_minutes": 10,
+      "grouping": "whole-class",
+      "teacher_actions": "Model inserting an internal link back to a contents slide and an external link to a relevant website, then test both in slideshow mode.",
+      "pupil_actions": "Watch and note the steps for inserting each type of link and how to test them.",
+      "notation_used": "application-gui"
+    },
+    {
+      "segment_type": "continued_learning",
+      "timing_minutes": 27,
+      "grouping": "individual",
+      "teacher_actions": "Set the task of adding one internal and one external link to their presentation; circulate with least-help-first prompts, particularly supporting appropriate external link choices.",
+      "pupil_actions": "Insert an internal URL and an external URL into their 'About Me' presentation and test both work correctly.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Have you tested that both your internal and external links work in slideshow mode?",
+        "format": "live-code-check",
+        "decision_rule": "Pupils whose links fail to work are supported individually before moving on."
+      }
+    },
+    {
+      "segment_type": "review_of_learning",
+      "timing_minutes": 10,
+      "grouping": "pair",
+      "teacher_actions": "Facilitate a paired test-and-check of each other's links; cold-call two pairs to share their external link choice and why it is relevant.",
+      "pupil_actions": "Swap with a partner, test both links, and give one piece of feedback on relevance and function.",
+      "notation_used": "application-gui",
+      "check_for_understanding": {
+        "question": "Exit ticket: where does your internal link go, and where does your external link go?",
+        "format": "other",
+        "decision_rule": "Pupils missing either link type are flagged for a brief catch-up prompt at the start of next lesson."
+      }
+    }
+  ],
+  "evaluation": null,
+  "reflection": null
+}

@@ -1,34 +1,73 @@
-# Year 7 Term 1 and 2#
+# Year 7 Term 1 and 2 #
 ## Term objectives ##
 This term we shall begin with introducing the digital skills needed to work in the computer science lessons before moving on to the first topic area we want to teach, mind maps. Followed by working with Microsoft Powerpoint. The golden thread for this learning journey will be based around an "About me" theme where the students will learn and use techniques in PowerPoint to make a presentation about themselves. 
 
-## Term 1
-### Lesson 1 - Digital Literacy 
-#### Objective
-The students shall show they understand the principles of the course, the expectations for work, and that they can operate with the IT equipment to the level needed to achieve the course objectives. Additionally lab behaviour will be explained. 
-#### Digital Literacy
-Students shall be shown and be expected to replicate the following: 
-- Log in and out of their accounts
-- Lock and unlock a screen
-- Open their OneNote for computer science from either teams or from the web
-- Add text to their OneNote
-- Add images to their OneNote
-- Add images from screenshots to their OneNote
-- Open a file link from their OneNote
+## Objectives Detail ##
+### Digital Literacy ###
+- To know the rules of the IT lab
+  -  Log on only with your own account
+  -  Not interfering with another students equipment
+  -  Must not use the computers for anything other than tasks set by the teacher
+  -  Be aware that activity is monitored
+  -  Must be only on resources appropriate to the task 
+  -  Must not use the camera unless it is for an assigned purpose
+  -  Must not eat in the lab
+  -  Must not drink near the computers
+-  To know the basic skills needed to work in the IT classroom
+   -  Log on and Off a PC 
+   -  Lock and Unlock a session
+   -  Open your OneNote from Teams 
+   -  Open your OneNote from browser
+   -  Open FileExplorer
+   -  Create a new folder in your documents folder
+   -  Save Files to your drive
+   -  Copy a file from one folder to another
+   -  Rename a file
+   -  Add text to OneNote
+   -  Make a screenshot 
+   -  Add an image to OneNote
+   -  Open A link in your OneNote
+### Midmap ###
+#### Recall ####
+- Lab rules
+- Opening your OneNote
+- Opening your file explorer and going to documents
 
-The students shall be taught IT rules and shall pass a quiz to show understanding about the lab environment, this will additionally be reinforced by a posted rules sheet.
-- They may not use the equipment for anything other than completing tasks
-- They must not open the camera unless it is explicitly for a task
-- They must not eat in the Lab
-- They may drink but away from the desk and with permission
-- They must not throw anything in the lab
-- They must not disconnect or connect equipment without explicit agreement from the teacher
-- They must not interfere with other students terminals
-- They must not tip themselves on chairs or in any way act in a manner that may potentially cause others injury or upset.
+#### Lesson Objectives ####
+- Record some basic facts about yourself
+  - What your favourite subject at school, and why
+  - What is your favourite food, and why
+  - What is your favourite movie, and why
+  - What are your favourite things to watch
+  - What is a hobby that you do or would like to do, and why
+  - What is your favourite thing at school
+  - What are you most proud of that you have done in the last few weeks 
+- To be able to describe what a MindMap is and why it is used
+- To be able to describe how mindmaps are used in planning
+- To describe the constituent parts of a mindmap
+  - Central Theme 
+  - Nodes
+  - Sub-nodes
+- Create a mindmap about yourself
+  - Level 1 Structural - Central Theme (about you), 5 nodes, one subnode in each 
+  - Level 2 Multi-Structural - Central theme, 5 nodes, 3 subnodes in each
+  - Level 3 Relational - Central theme, 5 nodes, 5 subnodes
+  - Level 4 Extended - Central Theme, 5 nodes, 5 subnodes, at least one subnode from the subnode
+ 
+### PowerPoint ###
+#### recall ####
+- What is a mindmap
+- What is a mindmap used for
+- What are the different parts of a mindmap
 
+#### Lesson Objectives ####
+- To describe why we use PowerPoint
+- To be able to open a new PowerPoint
+- To be able to save the PowerPoint in your OneDrive
+- To describe what outline mode is and what it is used for
+- To demonstrate you can put information you made in your mindmap into the outline
 
-##### Equipment used
-###### Teacher
-The teacher shall use the assigned PowerPoint to cover the ubject area points
-The teacher shall use the screen to demonstrate the actions needed to complete the digital literacy tasks
-
+#### recall ####
+- Why do we use PowerPoint
+- Why do we use outline mode
+- What are some of the Icons in 
